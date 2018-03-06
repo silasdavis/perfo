@@ -3,6 +3,7 @@
 This repo contains code to reproduce a problem with monax.
 
 Creating many contracts leads to high CPU load and performance problems with the chain.
+
 Monax CLI Version: 0.17.0 & 0.18
 
 To run tests:
