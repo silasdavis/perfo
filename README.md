@@ -4,6 +4,9 @@ This repo contains code to reproduce a problem with monax.
 
 Issue: creating many contracts leads to high CPU load and performance problems with the chain.
 
+There might be a relation with the following issue: https://github.com/hyperledger/burrow/issues/611
+and possibly it is caused by the Tendermint version used in Burrow, see https://github.com/tendermint/tendermint/issues/388 (there was a fix in Tendermint 0.9 but it seems that version is not used yet by Burrow) 
+
 Monax CLI Version: 0.17.0 & 0.18
 
 Remark: this repo contains code to illustrate the problem, and is kept simple.
