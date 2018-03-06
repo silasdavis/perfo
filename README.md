@@ -2,15 +2,19 @@
 
 This repo contains code to reproduce a problem with monax. 
 
-Issue: creating many contracts leads to high CPU load and performance problems with the chain.
+## Issue 
+Creating many contracts leads to high CPU load and performance problems with the chain.
+After stopping the chain the CPU usage drops, but then it is no longer possible to start the chain as this leads to an error "panic: 
+Paniced on a Sanity Check: Expected storeHeight (1867) and stateHeight (1866) to match", which seems to be a problem with Tendermint ( see 
+https://github.com/tendermint/tendermint/issues/388 ). There has been a fix in Tendermint (version 0.9) but this version is not used yet 
+by monax, apparently.
 
 There might be a relation with the following issue: https://github.com/hyperledger/burrow/issues/611
-and possibly it is caused by the Tendermint version used in Burrow, see https://github.com/tendermint/tendermint/issues/388 (there was a fix in Tendermint 0.9 but it seems that version is not used yet by Burrow) 
 
+## Version info
 Monax CLI Version: 0.17.0 & 0.18
 
-Remark: this repo contains code to illustrate the problem, and is kept simple.
-
+## Instructions
 To run tests:
 
 1. Create a simplechain (1 full account) and start the chain
