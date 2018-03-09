@@ -1,0 +1,39 @@
+jobs:
+
+- name: deployA
+  deploy:
+    contract: contracts.sol
+    instance: A
+    wait: true
+
+- name: deployB
+  deploy:
+    contract: contracts.sol
+    instance: B
+    wait: true
+
+- name: deployC
+  deploy:
+    contract: contracts.sol
+    instance: C
+    data:
+      - 1
+    wait: true
+
+- name: deployD
+  deploy:
+    contract: contracts.sol
+    instance: D
+    wait: true
+
+- name: deployFactory
+  deploy:
+    contract: contracts.sol
+    instance: Factory
+    wait: true
+
+- name: deployStorage
+  deploy:
+    contract: contracts.sol
+    instance: Storage
+    wait: true

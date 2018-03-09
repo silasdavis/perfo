@@ -2,10 +2,10 @@ const fs = require('fs');
 const monax = require('@monax/legacy-contracts');
 const status = require('./lib/status');
 
-const jobs = require('./jobs_output.json');
+const jobs = require('./epm.output.json');
 const keys = require('./keys.json');
 
-const chainUrl = "http://192.168.99.100:1337/rpc";
+const chainUrl = "http://localhost:1337/rpc";
 
 const contractManager = monax.newContractManagerDev(chainUrl, keys);
 const abi = JSON.parse(fs.readFileSync('./abi/Storage'));
